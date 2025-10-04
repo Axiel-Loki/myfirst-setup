@@ -1,0 +1,80 @@
+# ==========================
+# DUNST CONFIG - Hyprland Style
+# ==========================
+
+[global]
+monitor = 0
+follow = none
+origin = top-right
+offset = (10, 50)
+
+width = 300
+height = (0, 300)
+corner_radius = 1       # arredondamento sutil, como Hyprland
+
+padding = 6
+horizontal_padding = 6
+text_icon_padding = 4
+separator_height = 1
+frame_width = 1         # borda mínima
+gap_size = 1
+
+font = "IBM Plex Mono 9"
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+vertical_alignment = center
+ellipsize = end
+stack_duplicates = true
+hide_duplicate_count = true
+show_age_threshold = -1
+show_indicators = no
+
+enable_recursive_icon_lookup = false
+icon_position = left
+min_icon_size = 24
+max_icon_size = 24
+
+progress_bar = true
+progress_bar_height = 5
+progress_bar_frame_width = 0
+progress_bar_min_width = 150
+progress_bar_max_width = 300
+progress_bar_corner_radius = 1
+progress_bar_corners = all
+
+sticky_history = yes
+history_length = 10
+
+mouse_left_click = close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+
+dmenu = /usr/bin/dmenu -p dunst:
+browser = /usr/bin/xdg-open
+always_run_script = true
+title = Dunst
+class = Dunst
+
+# ==========================
+# URGENCY COLORS - Monochrome
+# ==========================
+
+[urgency_low]
+background = "#1a1a1a"       # neutro escuro
+foreground = "#aaaaaa"
+timeout = 5
+default_icon = dialog-information
+
+[urgency_normal]
+background = "#2e2e2e"       # neutro médio
+foreground = "#ffffff"
+timeout = 5
+default_icon = dialog-information
+
+[urgency_critical]
+background = "#900000"       # destaque vermelho
+foreground = "#ffffff"
+frame_color = "#ff0000"
+timeout = 0
+default_icon = dialog-warning

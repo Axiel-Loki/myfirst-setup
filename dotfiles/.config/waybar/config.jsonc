@@ -1,0 +1,100 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 26,
+  "modules-left": ["custom/arch", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": [],
+  "modules-right": ["bluetooth", "custom/sep1", "network", "custom/sep2", "custom/brightness", "custom/sep3", "pulseaudio", "custom/sep4", "battery", "custom/sep5", "clock"],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "O ",
+      "2": "O ",
+      "3": "O ",
+      "4": "O ",
+      "5": "O ",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "0",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "hyprland/window": {
+    "format": "{class}",
+    "max-length": 50,
+    "separate-outputs": true
+  },
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip": false
+  },
+  "custom/brightness": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/brightness_bar.sh",
+    "interval": 2,
+    "tooltip": true,
+    "on-scroll-up": "brightnessctl set +5",
+    "on-scroll-down": "brightnessctl set 5-"
+  },
+  "bluetooth": {
+    "format": "BT: {status}",
+    "format-on": "BT: On",
+    "format-off": "BT: Off",
+    "tooltip": true
+  },
+  "network": {
+    "format-wifi": "NET: {essid}",
+    "format-ethernet": "NET: {ifname}",
+    "format-disconnected": "NET: off",
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "VOL: {volume}",
+    "format-muted": "VOl: Muted",
+    "on-click": "pavucontrol",
+    "tooltip": true
+  },
+  "battery": {
+    "format": "BAT: {capacity}",
+    "format-charging": "BAT: {capacity} ⚡",
+    "format-full": "BAT: {capacity}",
+    "tooltip": true
+  },
+  "custom/sep1": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sep2": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sep3": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sep4": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sep5": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  }
+}
