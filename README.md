@@ -1,2 +1,3 @@
-# myfirst-setup
+# hypr-setup
+
 Hyprland minimalista e monocrómatico
