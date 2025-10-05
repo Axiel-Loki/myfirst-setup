@@ -6,29 +6,19 @@
   "modules-center": [],
   "modules-right": ["bluetooth", "custom/sep1", "network", "custom/sep2", "custom/brightness", "custom/sep3", "pulseaudio", "custom/sep4", "battery", "custom/sep5", "clock"],
   "hyprland/workspaces": {
-    "disable-scroll": true,
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "on-click": "activate",
+    "active-only": false,
     "all-outputs": true,
-    "warp-on-scroll": false,
-    "format": "{icon}",
+    "format": "{}",
     "format-icons": {
-      "1": "O ",
-      "2": "O ",
-      "3": "O ",
-      "4": "O ",
-      "5": "O ",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "active": "0 ",
+      "urgent": "",
+      "active": "",
       "default": ""
     },
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
+      "*": 5
     }
   },
   "hyprland/window": {
