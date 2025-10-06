@@ -78,3 +78,11 @@ foreground = "#ffffff"
 frame_color = "#ff0000"
 timeout = 0
 default_icon = dialog-warning
+
+# Regra exemplo para notificações de sistema (ajuste se quiser filtrar)
+[rule-usb]
+    category = device.added  # Ou "device.removed" para unplug
+    urgency = low
+    background = "#285577"
+    icon = usb  # Ícone do tema (ex: usb-symbolic)
+    timeout = 3
